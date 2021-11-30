@@ -1,8 +1,8 @@
-BUILD_DIR := .build
-INFRASTRUCTURE_DIR := ../infrastructure
-CONFIGURATION_FILE := ../configuration.tfvars
-REPOSITORY := myrepository
-AWS_BUCKET := mybucket
+BUILD_DIR ?= .build
+INFRASTRUCTURE_DIR ?= ../infrastructure
+CONFIGURATION_FILE ?= ../configuration.tfvars
+REPOSITORY ?= myrepository
+AWS_BUCKET ?= mybucket
 
 _tearup:
 ifneq ($(wildcard $(INFRASTRUCTURE_DIR)),)
